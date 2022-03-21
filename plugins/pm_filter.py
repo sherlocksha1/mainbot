@@ -408,6 +408,18 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('𝙾𝚠𝚗𝚎𝚛', url='https://t.me/albintko'),
             InlineKeyboardButton('𝙲𝚑𝚊𝚗𝚗𝚎𝚕', url='https://t.me/new_all_movies_club')
         ]]
+        await query.message.edit_text(
+            text="⭗ ⭗ ⭗"
+        )
+        await query.message.edit_text(
+            text="⦿ ⭗ ⭗"
+        )
+        await query.message.edit_text(
+            text="⦿ ⦿ ⭗"
+        )
+        await query.message.edit_text(
+            text="⦿ ⦿ ⦿"
+        )
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
@@ -439,10 +451,23 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ],[
             InlineKeyboardButton('📌 𝐏𝐢𝐧 ', callback_data='pin'),
             InlineKeyboardButton('🦠 𝐂𝐨𝐯𝐢𝐝 ', callback_data='corona'),
-            InlineKeyboardButton('🖨️ 𝐒𝐭𝐢𝐜𝐤𝐞𝐫𝐈𝐃 ', callback_data='stickerid')
+            InlineKeyboardButton('🖨️ 𝐒𝐭𝐢𝐜𝐤𝐞𝐫𝐈𝐃 ', callback_data='stickerid'),
             ],[
+            InlineKeyboardButton('📁𝗙-𝗦𝘁𝗼𝗿𝗲 ', callback_data='newdata'),
             InlineKeyboardButton('❈ 𝙱𝙰𝙲𝙺 ❈', callback_data='start')
         ]]
+        await query.message.edit_text(
+            text="⭗ ⭗ ⭗"
+        )
+        await query.message.edit_text(
+            text="⦿ ⭗ ⭗"
+        )
+        await query.message.edit_text(
+            text="⦿ ⦿ ⭗"
+        )
+        await query.message.edit_text(
+            text="⦿ ⦿ ⦿"
+        )
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.HELP_TXT.format(query.from_user.mention),
@@ -527,6 +552,16 @@ parse_mode='html'
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.SONG_TXT,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "newdata":
+        buttons = [[
+            InlineKeyboardButton('𝙱𝙰𝙲𝙺', callback_data='help')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.FILE_TXT,
             reply_markup=reply_markup,
             parse_mode='html'
         )
